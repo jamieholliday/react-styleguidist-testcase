@@ -1,0 +1,53 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+  },
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true,
+  },
+  "rules": {
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    // Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
+    "block-scoped-var": 0,
+    // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
+    "padded-blocks": 0,
+    "react/no-multi-comp": 0, //Disable so we can use functions in components
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-else-return": 0,
+    "react/sort-comp": [1, {
+      "order": [
+        "connectData",
+        "connect",
+        "constructor",
+        "statics",
+        "propTypes",
+        "fetchData",
+        "lifecycle",
+        "everything-else",
+        "render"
+        ]
+      }
+    ]
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DISABLE_SSR__": true,
+    "__DEVTOOLS__": true,
+    "webpackIsomorphicTools": true,
+    "jest": true,
+    "describe": true,
+    "it": true,
+    "expect": true
+  }
+}
