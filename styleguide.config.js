@@ -4,7 +4,6 @@ module.exports = {
   title: 'Component Library',
   rootDir: './src',
   skipComponentsWithoutExample: true,
-  verbose: true,
   serverPort: 4000,
   highlightTheme: 'base16-light',
   components: function(config, glob) {
